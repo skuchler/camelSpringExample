@@ -8,12 +8,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpringImportRouteExample {
 	public static final void main(String[] args) throws Exception {
 		ConfigurableApplicationContext appContext = new ClassPathXmlApplicationContext(
-				"importRouteApplicationContext.xml");
+				"myImportRouteApplicationContext.xml");
 		CamelContext camelContext = SpringCamelContext.springCamelContext(
 				appContext, false);
 		try {
 			camelContext.start();
-			Thread.sleep(3000);
+			Thread.sleep(6000);
 		} finally {
 			camelContext.stop();
 			appContext.close();
